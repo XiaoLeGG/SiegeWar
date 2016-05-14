@@ -1,0 +1,10 @@
+name: SiegeWar
+main: team.siegewar.SiegeWar
+version: 0.1 alpha
+commands:
+  siegewar:
+    description: 攻城战争命令
+    usege: /siegewar help
+  sw:
+    description: 攻城战争命令
+    usege: /siegewar help
