@@ -9,7 +9,11 @@ public class GameLoad implements Listener{
 	public GameLoad(SiegeWar siegeWar){
 		this.siegeWar = siegeWar;
 	}
-	public void load(String game){
-	
+	public void reload(){
+		for (String s:this.siegeWar.getGames().getKeys(true)){
+			if (!s.contains(".")){
+				
+			}
+		}
 	}
 }
