@@ -16,20 +16,16 @@ public class SiegeWar extends JavaPlugin implements Listener{
 	public void onEnable(){
 		getLogger().info("攻城战争已开启");
 		this.getDataFolder().mkdirs();
-		if (!new File(getDataFolder(),"config.yml").exists()) this.saveResource("config", false);
-		if (!new File(getDataFolder(),"Games.yml").exists()){
-			try {
-				new File(getDataFolder(),"Games.yml").createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		new File(getDataFolder(),"\\PlayerData").mkdirs();
+		createFile();
 		config = YamlConfiguration.loadConfiguration(new File(getDataFolder(),"config.yml"));
-		games = YamlConfiguration.loadConfiguration(new File(getDataFolder(),"Games.yml"));
 		gameLoad = new GameLoad(this);
 		gameLoad.reload();
 		getServer().getPluginManager().registerEvents(new Commands(this), this);
+	}
+	public void createFile(){
+		if (!new File(getDataFolder(),"config.yml").exists()) this.saveResource("config", false);
+		new File(getDataFolder(),"\\Games").mkdirs();
+		new File(getDataFolder(),"\\PlayerData").mkdirs();
 	}
 	public void onLoad(){
 		getLogger().info("攻城战争已加载");

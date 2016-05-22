@@ -1,10 +1,9 @@
 name: SiegeWar
 main: team.siegewar.SiegeWar
 version: 0.1 alpha
+authors: [a_austin,nodak_lzc]
 commands:
   siegewar:
     description: 攻城战争命令
     usage: /siegewar help
-  sw:
-    description: 攻城战争命令
-    usage: /siegewar help
+    aliases: [sw,siegew]
