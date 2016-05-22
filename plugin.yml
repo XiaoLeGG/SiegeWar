@@ -4,6 +4,6 @@ version: 0.1 alpha
 authors: [a_austin,nodak_lzc]
 commands:
   siegewar:
-    description: ¹¥³ÇÕ½ÕùÃüÁî
+    description: Commands of SiegeWar
     usage: /siegewar help
     aliases: [sw,siegew]
