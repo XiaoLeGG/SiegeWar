@@ -29,6 +29,7 @@ public class SiegeWar extends JavaPlugin implements Listener{
 		games = YamlConfiguration.loadConfiguration(new File(getDataFolder(),"Games.yml"));
 		gameLoad = new GameLoad(this);
 		gameLoad.reload();
+		getServer().getPluginManager().registerEvents(new Commands(this), this);
 	}
 	public void onLoad(){
 		getLogger().info("攻城战争已加载");
